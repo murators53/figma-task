@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="ShoppingCard">
+      <div class="Left-Section">
+        <img src="img/4.png" alt="" class="image" />
+      </div>
+      <div class="Right-Section">
+        <div class="Title">
+          <p class="bigtextmodel">
+            Everyday items, we have something to suit every occasion.
+          </p>
+          <p class="smalltextmodel">
+            At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit
+            tincidunt semper eu proin leo gravida cursus.
+          </p>
+          <p class="titlecomment">Shop all everyday items</p>
+          <hr class="line" />
+        </div>
+        <div class="container" id="items-container">
+          <div class="item bas" >
+            <img src="./img/1.png" alt="" class="slide-image">
+            <div class="deneme">
+              <p class="top-text">365 Signature Hoodie</p>
+              <div class="bottom">
+                <div>
+                  <p class="bot-text">€33.95</p>
+                </div>
+                <div class="group-round">
+                  <div class="round bir"></div>
+                  <div class="round iki"></div>
+                  <div class="round uc"></div>
+                  <div class="round dort ">
+                    <span class="bes"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/2.png" alt="" class="slide-image">
+            <div class="deneme">
+              <p class="top-text">Organic Skinny High Waist Jeans</p>
+              <div class="bottom">
+                <div>
+                  <p class="bot-text">€33.95</p>
+                </div>
+                <div class="group-round">
+                  <div class="round bir"></div>
+                  <div class="round iki"></div>
+                  <div class="round uc"></div>
+                  <div class="round dort ">
+                    <span class="bes"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item" >
+            <img src="./img/3.png" alt="" class="slide-image">
+            <div class="deneme">
+              <p class="top-text">Organic Skinny High Waist Jeans</p>
+              <div class="bottom">
+                <div>
+                  <p class="bot-text">€33.95</p>
+                </div>
+                <div class="group-round">
+                  <div class="round bir"></div>
+                  <div class="round iki"></div>
+                  <div class="round uc"></div>
+                  <div class="round dort ">
+                    <span class="bes"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.querySelector('#items-container');
+                let startY;
+                let startX;
+                let scrollLeft;
+                let scrollTop;
+                let isDown;
+                
+                container.addEventListener('mousedown',e => mouseIsDown(e));  
+                container.addEventListener('mouseup',e => mouseUp(e))
+                container.addEventListener('mouseleave',e=>mouseLeave(e));
+                container.addEventListener('mousemove',e=>mouseMove(e));
+                
+                function mouseIsDown(e){
+                  isDown = true;
+                  startX = e.pageX - container.offsetLeft;
+                  scrollLeft = container.scrollLeft;
+                }
+                function mouseUp(e){
+                  isDown = false;
+                }
+                function mouseLeave(e){
+                  isDown = false;
+                }
+                function mouseMove(e){
+                  if(isDown){
+                    e.preventDefault();
+                    //Move Horizontally
+                    const x = e.pageX - container.offsetLeft;
+                    const walkX = x - startX;
+                    container.scrollLeft = scrollLeft - walkX;
+                
+                  }
+                }
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+
+
+
+
+<div class="slider-shopping wrapper" >
+            <div>
+                <img src="./img/3.png" alt='swweet' class="slide-image"/>
+            </div>
+            <div>
+                <img src="./img/2.png" alt='swweet' class="slide-image ler"/>
+            </div>
+            <div>
+                <img src="./img/1.png" alt='swweet' class="slide-image ler"/>
+            </div>
+          </div>
+
+
+
+ -->

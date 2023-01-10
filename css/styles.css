@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    padding : 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  
+  .ShoppingCard{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .Left-Section{
+    position: absolute;
+    width: 50%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    z-index: 11;
+  }
+  .image{
+    width: 100%;
+  }
+  .Right-Section{
+    position: absolute;
+    top:0;
+    bottom: 0%;
+    right: 0%;
+    left: 50%;
+    z-index: 1;
+  }
+  .Title{
+    position: absolute;
+    left: 120px;
+    padding-right: 226px;
+    top: 95px;
+    width: auto;
+  }
+  
+  .bigtextmodel{
+    src: url(fonts/Bold.otf);
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 130%;
+    padding-right: 45px;
+    width: auto;
+    color: #000000;
+  }
+  
+  .smalltextmodel{
+    src: url(fonts/Avenir.ttc);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #666666;
+    margin-top: 12px;
+  }
+  
+  .titlecomment{
+    src: url(fonts/Avenir.ttc);
+    font-style: normal;
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 12.8px;
+    line-height: 17px;
+  }
+  .line{
+    width: 146px;
+    height: 1px;
+    background: #000000;
+    margin: 0;
+    margin-top: -11px;
+  }
+  
+  .slider-shopping{
+    border: 1px solid red;
+    margin-top: 68px;
+    height: 363px;
+    width: 906px;
+    
+    overflow: visible;
+  }
+  .slide-image{
+    width: 230px;
+    height: 310px;
+    z-index: 11;
+  }
+  
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+  }
+  
+  .container{
+    display: grid;
+    /* direction: ltl; */
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 363px;
+    overflow:auto;
+    width: 840px;
+    overflow-y: hidden;
+    position: absolute;
+    top: 450px;
+    gap: 30px;
+    left: -125px;
+    overflow-x: hidden;
+    z-index: 3;
+    padding-right: 52px;
+    width: auto;
+  }
+  .bigtextmodel {
+    font-size: 25px;
+  }
+  .smalltextmodel {
+    font-size: 15px;
+  }
+
+.bas{
+    margin-left: 240px;
+}
+.deneme{
+  position: relative;
+  margin-top: -7%;
+}
+.top-text{
+  position: absolute;
+  top: 0;
+  src: url(fonts/Avenir.ttc);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 160%;
+  top: 12px;
+}
+.bottom{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: -75px;
+}
+.bot-text{
+  src: url(fonts/Avenir.ttc);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.8px;
+  line-height: 160%;
+}
+.group-round{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.round{
+  border: none;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  bottom: -30px;
+  left: 218px;
+}
+  .bir{
+  background: #99C3CC;
+}
+ .iki{
+  margin-left:-18px ;
+  background: #CC9999;
+}
+ .uc{
+  margin-left:-38px ;
+  background: #CB99CC;
+}
+.dort{
+  width: 10px !important;
+  height: 10px !important;
+  margin-left:-58px ;
+  border: 1px solid black;
+}
+.bes{
+  width: 8px !important;
+  height: 8px !important;
+  background: #99C3CC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: auto ;
+  margin-top: 1px;
+}
+
+@media only screen and (max-width: 570px) {
+  html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+  .ShoppingCard{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .Left-Section{
+    width: 100%;
+  }
+  .Right-Section{
+    z-index: 11;
+    position: absolute;
+    left: -10%;
+    width: 120px !important;
+    display: block;
+    top: 128px;
+    left: -95px;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-top: 3px solid white;
+  }
+  .bigtextmodel{
+    color: #fff;
+    width: 300px;
+    font-size: 20px;
+    line-height: 130%;
+    flex-shrink: 0;
+    text-align: center;
+    text-align: left;
+  }
+  .smalltextmodel{
+    display: none;
+  }
+  .titlecomment{
+    color: #fff;
+  }
+  .line{
+    background:white;
+  }
+  .container{
+    top: 280px;
+    height: 363px;
+    overflow:auto;
+    width: 540px;
+  }
+  .slide-image{
+    width: 148px;
+    height: 200px;
+  }
+  .round{
+    left: 120px;
+  }
+}
